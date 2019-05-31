@@ -1,0 +1,16 @@
+<p>
+  <span>Select search criterion: </span>
+
+  <select ng-model="selectedName">
+    <option (change)="registerCrit()" *ngFor="let x of crit">
+      {{x}}
+    </option>
+  </select>
+</p>
+
+<p>
+  Insert Keyword:
+  <input type="text" (change)="submitKey()" />
+</p>
+
+<button (click)="reqButton()">Request JSON file</button>
